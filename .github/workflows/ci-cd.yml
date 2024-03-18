@@ -22,7 +22,7 @@ jobs:
       - name: Build website
         run: npm run build
       - name: Upload Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: build-artifact
           path: dist
@@ -33,7 +33,7 @@ jobs:
       - name: Deploy
         run: echo "Deploying..."
       - name: Download Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: build-artifact
           path: dist
